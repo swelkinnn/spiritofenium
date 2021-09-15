@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "soe:blocks/hypercharge_tnt_side",
+    "up": "soe:blocks/hypercharge_tnt_side",
+    "north": "soe:blocks/hypercharge_tnt_side",
+    "east": "soe:blocks/hypercharge_tnt_side",
+    "south": "soe:blocks/hypercharge_tnt_side",
+    "west": "soe:blocks/hypercharge_tnt_side",
+    "particle": "soe:blocks/hypercharge_tnt_side"
+  }
+}
