@@ -1,0 +1,21 @@
+{
+  "_fv": 24,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Void Sickness",
+    "splashName": "Splash Void Sickness",
+    "lingeringName": "Lingering Void Sickness",
+    "arrowName": "Arrow of Void Sickness",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:VoidSickness"
+        },
+        "duration": 3600,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}

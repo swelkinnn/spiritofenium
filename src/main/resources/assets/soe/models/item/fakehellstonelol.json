@@ -1,0 +1,7 @@
+{
+  "parent": "soe:custom/block_lol",
+  "textures": {
+    "0": "soe:blocks/hellstone",
+    "particle": "soe:items/rotten_bait"
+  }
+}

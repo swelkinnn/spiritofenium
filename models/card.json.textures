@@ -1,0 +1,16 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "card"
+      },
+      "name": "default"
+    },
+    "magician": {
+      "map": {
+        "0": "card_1"
+      },
+      "name": "magician"
+    }
+  }
+}

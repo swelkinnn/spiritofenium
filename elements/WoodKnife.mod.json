@@ -1,0 +1,27 @@
+{
+  "_fv": 24,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "wood_knife",
+    "customModelName": "Normal",
+    "name": "Wood Knife",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:GMTToolsAndWeapons"
+    },
+    "toolType": "Sword",
+    "harvestLevel": 0,
+    "efficiency": 2.0,
+    "attackSpeed": 20.0,
+    "enchantability": 15,
+    "damageVsEntity": 0.5,
+    "usageCount": 59,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

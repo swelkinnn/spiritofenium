@@ -1,0 +1,49 @@
+{
+  "_fv": 24,
+  "_type": "fluid",
+  "definition": {
+    "name": "Liquid Abyss",
+    "bucketName": "Liquid Abyss Bucket",
+    "textureStill": "abyss",
+    "textureFlowing": "abyss",
+    "tintType": "No tint",
+    "canMultiply": true,
+    "flowRate": 2,
+    "levelDecrease": 1,
+    "slopeFindDistance": 4,
+    "spawnParticles": true,
+    "dripParticle": {
+      "value": "CUSTOM:NowhereSoul"
+    },
+    "flowStrength": 2.5,
+    "luminosity": 0,
+    "density": 5000,
+    "viscosity": 10000,
+    "isGas": false,
+    "temperature": 0,
+    "type": "WATER",
+    "generateBucket": true,
+    "textureBucket": "",
+    "creativeTab": {
+      "value": "CUSTOM:GTMBlocks"
+    },
+    "emptySound": {
+      "value": ""
+    },
+    "rarity": "COMMON",
+    "specialInfo": [],
+    "resistance": 100.0,
+    "luminance": 0,
+    "lightOpacity": 1,
+    "emissiveRendering": false,
+    "tickRate": 10,
+    "flammability": 0,
+    "fireSpreadSpeed": 0,
+    "colorOnMap": "BLACK",
+    "frequencyOnChunks": 5,
+    "spawnWorldTypes": [
+      "CUSTOM:Nowhere"
+    ],
+    "restrictionBiomes": []
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "_fv": 24,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "lavendariumhelmet",
+    "enableBody": true,
+    "textureBody": "lavendariumchestplate",
+    "enableLeggings": true,
+    "textureLeggings": "lavendariumleggings",
+    "enableBoots": true,
+    "textureBoots": "lavendariumboots",
+    "onHelmetTick": {
+      "name": "LavendariumArmorHelmetTickEvent"
+    },
+    "creativeTab": {
+      "value": "CUSTOM:GTMArmors"
+    },
+    "armorTextureFile": "lavendariumarmor",
+    "helmetName": "Lavendarium Helmet",
+    "bodyName": "Lavendarium Body",
+    "leggingsName": "Lavendarium Leggings",
+    "bootsName": "Lavendarium Boots",
+    "helmetSpecialInfo": [
+      "§7ABILITY: Full set bonus, gain Speed 2 and Jump Boost 2"
+    ],
+    "bodySpecialInfo": [
+      "§7ABILITY: Full set bonus, gain Speed 2 and Jump Boost 2"
+    ],
+    "leggingsSpecialInfo": [
+      "§7ABILITY: Full set bonus, gain Speed 2 and Jump Boost 2"
+    ],
+    "bootsSpecialInfo": [
+      "§7ABILITY: Full set bonus, gain Speed 2 and Jump Boost 2"
+    ],
+    "helmetModelName": "Default",
+    "helmetModelPart": "Helmet",
+    "helmetModelTexture": "From armor",
+    "bodyModelName": "Default",
+    "bodyModelPart": "Body",
+    "armsModelPartL": "Arms L",
+    "armsModelPartR": "Arms R",
+    "bodyModelTexture": "From armor",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "Default",
+    "bootsModelPartL": "Boots L",
+    "bootsModelPartR": "Boots R",
+    "bootsModelTexture": "From armor",
+    "helmetImmuneToFire": false,
+    "bodyImmuneToFire": false,
+    "leggingsImmuneToFire": false,
+    "bootsImmuneToFire": false,
+    "maxDamage": 25,
+    "damageValueHelmet": 2,
+    "damageValueBody": 5,
+    "damageValueLeggings": 4,
+    "damageValueBoots": 2,
+    "enchantability": 9,
+    "toughness": 1.0,
+    "knockbackResistance": 0.0,
+    "equipSound": {
+      "value": "block.cloth.break"
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:LavendariumMesh"
+      },
+      {
+        "value": "CUSTOM:LavendariumIngot"
+      },
+      {
+        "value": "CUSTOM:LavendariumNugget"
+      }
+    ]
+  }
+}

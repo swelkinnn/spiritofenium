@@ -1,0 +1,37 @@
+{
+  "_fv": 24,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "lavendariumaxe",
+    "customModelName": "Normal",
+    "name": "Lavendarium Axe",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:GMTToolsAndWeapons"
+    },
+    "toolType": "Axe",
+    "harvestLevel": 2,
+    "efficiency": 7.5,
+    "attackSpeed": 0.75,
+    "enchantability": 14,
+    "damageVsEntity": 10.0,
+    "usageCount": 300,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:LavendariumMesh"
+      },
+      {
+        "value": "CUSTOM:LavendariumIngot"
+      },
+      {
+        "value": "CUSTOM:LavendariumNugget"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

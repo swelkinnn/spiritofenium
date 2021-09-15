@@ -1,0 +1,31 @@
+{
+  "_fv": 24,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "stone_hammer",
+    "customModelName": "Normal",
+    "name": "Stone Hammer",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:GMTToolsAndWeapons"
+    },
+    "toolType": "Pickaxe",
+    "harvestLevel": 1,
+    "efficiency": 4.0,
+    "attackSpeed": 0.6,
+    "enchantability": 5,
+    "damageVsEntity": 7.0,
+    "usageCount": 125,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "Blocks.COBBLESTONE"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

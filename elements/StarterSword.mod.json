@@ -1,0 +1,30 @@
+{
+  "_fv": 24,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "shalewood_slicer",
+    "customModelName": "Normal",
+    "name": "§oStarter Sword",
+    "specialInfo": [
+      "§7Found in your pocket. You don't know how you got this",
+      "but it's better than nothing."
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:GMTToolsAndWeapons"
+    },
+    "toolType": "Sword",
+    "harvestLevel": 1,
+    "efficiency": 4.0,
+    "attackSpeed": 1.4000000000000001,
+    "enchantability": 2,
+    "damageVsEntity": 2.5,
+    "usageCount": 0,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

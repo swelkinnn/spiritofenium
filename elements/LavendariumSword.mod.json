@@ -1,0 +1,34 @@
+{
+  "_fv": 24,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "lavendariumsword",
+    "customModelName": "Normal",
+    "name": "Lavendarium Sword",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:GMTToolsAndWeapons"
+    },
+    "toolType": "Sword",
+    "harvestLevel": 2,
+    "efficiency": 6.5,
+    "attackSpeed": 1.4,
+    "enchantability": 16,
+    "damageVsEntity": 4.5,
+    "usageCount": 250,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:LavendariumMesh"
+      },
+      {
+        "value": "CUSTOM:LavendariumIngot"
+      }
+    ],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

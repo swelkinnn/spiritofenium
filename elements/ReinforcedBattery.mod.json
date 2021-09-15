@@ -1,0 +1,30 @@
+{
+  "_fv": 24,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "reinforced_battery",
+    "customModelName": "Normal",
+    "name": "Reinforced Battery",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:GMTToolsAndWeapons"
+    },
+    "toolType": "Special",
+    "harvestLevel": 0,
+    "efficiency": 0.0,
+    "attackSpeed": 1.0,
+    "enchantability": 0,
+    "damageVsEntity": 0.0,
+    "usageCount": 10,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": true,
+    "damageOnCrafting": true,
+    "onRightClickedOnBlock": {
+      "name": "ReinforcedBatteryRightClickedOnBlock"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "_fv": 24,
+  "_type": "overlay",
+  "definition": {
+    "priority": "HIGHEST",
+    "components": [],
+    "baseTexture": "mana_final_75.png",
+    "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "Mana2DisplayOverlayIngame"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}
