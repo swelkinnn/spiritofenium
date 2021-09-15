@@ -23,10 +23,9 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
+import net.mcreator.genuinelytoomanyadditions.procedures.ItemGeneratorUpgrade2OnBlockRightClicked2Procedure;
 import net.mcreator.genuinelytoomanyadditions.procedures.ItemGeneratorUpdateTickProcedure;
-import net.mcreator.genuinelytoomanyadditions.procedures.ItemGeneratorOnBlockRightClickedProcedure;
 import net.mcreator.genuinelytoomanyadditions.procedures.ItemGeneratorBlockDestroyedByPlayerProcedure;
-import net.mcreator.genuinelytoomanyadditions.itemgroup.GTMOresItemGroup;
 import net.mcreator.genuinelytoomanyadditions.SoeModElements;
 
 import java.util.Random;
@@ -36,22 +35,22 @@ import java.util.HashMap;
 import java.util.Collections;
 
 @SoeModElements.ModElement.Tag
-public class ItemGeneratorBlock extends SoeModElements.ModElement {
-	@ObjectHolder("soe:item_generator")
+public class ItemGeneratorUpgrade2Block extends SoeModElements.ModElement {
+	@ObjectHolder("soe:item_generator_upgrade_2")
 	public static final Block block = null;
-	public ItemGeneratorBlock(SoeModElements instance) {
-		super(instance, 1006);
+	public ItemGeneratorUpgrade2Block(SoeModElements instance) {
+		super(instance, 1008);
 	}
 
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(GTMOresItemGroup.tab)).setRegistryName(block.getRegistryName()));
+		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(null)).setRegistryName(block.getRegistryName()));
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ROCK).sound(SoundType.GROUND).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0));
-			setRegistryName("item_generator");
+			setRegistryName("item_generator_upgrade_2");
 		}
 
 		@Override
@@ -73,7 +72,7 @@ public class ItemGeneratorBlock extends SoeModElements.ModElement {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 300);
+			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 200);
 		}
 
 		@Override
@@ -90,7 +89,7 @@ public class ItemGeneratorBlock extends SoeModElements.ModElement {
 				$_dependencies.put("world", world);
 				ItemGeneratorUpdateTickProcedure.executeProcedure($_dependencies);
 			}
-			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 300);
+			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 200);
 		}
 
 		@Override
@@ -138,7 +137,7 @@ public class ItemGeneratorBlock extends SoeModElements.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				ItemGeneratorOnBlockRightClickedProcedure.executeProcedure($_dependencies);
+				ItemGeneratorUpgrade2OnBlockRightClicked2Procedure.executeProcedure($_dependencies);
 			}
 			return ActionResultType.SUCCESS;
 		}

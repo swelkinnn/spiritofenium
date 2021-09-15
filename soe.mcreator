@@ -12946,6 +12946,188 @@
       "ids": {},
       "registry_name": "item_generator",
       "path": "~/Spirit Of Enium/Random Blocks"
+    },
+    {
+      "name": "ItemGeneratorUpdateTick",
+      "type": "procedure",
+      "sortid": 1007,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "item_generator_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ItemGeneratorUpgrade2",
+      "type": "block",
+      "sortid": 1008,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "item_generator_upgrade_2",
+      "path": "~/Spirit Of Enium/Random Blocks"
+    },
+    {
+      "name": "ItemGeneratorOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 1008,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "item_generator_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ItemGeneratorBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 1009,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "item_generator_block_destroyed_by_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ItemGeneratorUpgrade3",
+      "type": "block",
+      "sortid": 1010,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "item_generator_upgrade_3",
+      "path": "~/Spirit Of Enium/Random Blocks"
+    },
+    {
+      "name": "ItemGeneratorUpgrade2OnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 1011,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "item_generator_upgrade_2_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ItemGeneratorUpgrade2OnBlockRightClicked2",
+      "type": "procedure",
+      "sortid": 1012,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "item_generator_upgrade_2_on_block_right_clicked_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ItemGeneratorUpgrade3OnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 1013,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "item_generator_upgrade_3_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -12996,6 +13178,12 @@
       "type": "number",
       "scope": "map",
       "value": "0"
+    },
+    {
+      "name": "Amount_Of_Items",
+      "type": "blockstate",
+      "scope": "map",
+      "value": "Blocks.AIR.getDefaultState()"
     }
   ],
   "sound_elements": [
@@ -13323,8 +13511,8 @@
       "item.soe.lavendarium_sword": "Lavendarium Sword",
       "entity.soe.the_lost": "The Lost",
       "subtitles.lightspell": "Light Spell",
-      "item.gtma.pigman_warrior": "Pigman Warrior Spawn Egg",
       "entity.gtma.crawling_violet_flame_cultist": "Crawling Violet Flame Cultist",
+      "item.gtma.pigman_warrior": "Pigman Warrior Spawn Egg",
       "effect.void_sickness": "Void Sickness",
       "subtitles.wendigo_dies": "Wendigo falls",
       "item.gtma.dingushold": "Dingus",
@@ -13775,6 +13963,8 @@
       "block.gtma.ancient_sandstone_enscribings": "Sandstone Enscribings",
       "item.soe.vgkgrimmicon": "Vgkgrimmicon",
       "item.soe.cheese": "Cheese",
+      "block.soe.item_generator_upgrade_2": "Item Generator",
+      "block.soe.item_generator_upgrade_3": "Item Generator",
       "itemGroup.tabgtm_mobs": "GTM Mobs",
       "item.gtma.mothman_spawn_egg": "Mothman Spawn Egg",
       "item.gtma.violet_cloak_leggings": "Moth Leggings",
