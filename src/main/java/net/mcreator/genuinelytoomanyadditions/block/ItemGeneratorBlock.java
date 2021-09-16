@@ -2,31 +2,42 @@
 package net.mcreator.genuinelytoomanyadditions.block;
 
 import net.minecraftforge.registries.ObjectHolder;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.Explosion;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.Rotation;
+import net.minecraft.util.Mirror;
 import net.minecraft.util.Hand;
 import net.minecraft.util.Direction;
 import net.minecraft.util.ActionResultType;
+import net.minecraft.state.StateContainer;
+import net.minecraft.state.DirectionProperty;
 import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
+import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.BlockItem;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
+import net.minecraft.block.HorizontalBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.mcreator.genuinelytoomanyadditions.procedures.ItemGeneratorUpdateTickProcedure;
 import net.mcreator.genuinelytoomanyadditions.procedures.ItemGeneratorOnBlockRightClickedProcedure;
 import net.mcreator.genuinelytoomanyadditions.procedures.ItemGeneratorBlockDestroyedByPlayerProcedure;
-import net.mcreator.genuinelytoomanyadditions.itemgroup.GTMOresItemGroup;
+import net.mcreator.genuinelytoomanyadditions.itemgroup.GTMBlocksItemGroup;
 import net.mcreator.genuinelytoomanyadditions.SoeModElements;
 
 import java.util.Random;
@@ -46,17 +57,45 @@ public class ItemGeneratorBlock extends SoeModElements.ModElement {
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(GTMOresItemGroup.tab)).setRegistryName(block.getRegistryName()));
+		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(GTMBlocksItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
 	public static class CustomBlock extends Block {
+		public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.GROUND).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0));
+			super(Block.Properties.create(Material.ANVIL).sound(SoundType.NETHERITE).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0));
+			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH));
 			setRegistryName("item_generator");
+		}
+
+		@Override
+		@OnlyIn(Dist.CLIENT)
+		public void addInformation(ItemStack itemstack, IBlockReader world, List<ITextComponent> list, ITooltipFlag flag) {
+			super.addInformation(itemstack, world, list, flag);
+			list.add(new StringTextComponent("\u00A77Place ore above to infinitely produce more the result."));
 		}
 
 		@Override
 		public int getOpacity(BlockState state, IBlockReader worldIn, BlockPos pos) {
 			return 15;
+		}
+
+		@Override
+		protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
+			builder.add(FACING);
+		}
+
+		public BlockState rotate(BlockState state, Rotation rot) {
+			return state.with(FACING, rot.rotate(state.get(FACING)));
+		}
+
+		public BlockState mirror(BlockState state, Mirror mirrorIn) {
+			return state.rotate(mirrorIn.toRotation(state.get(FACING)));
+		}
+
+		@Override
+		public BlockState getStateForPlacement(BlockItemUseContext context) {
+			;
+			return this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing().getOpposite());
 		}
 
 		@Override

@@ -2893,16 +2893,6 @@
       "path": "~/Spirit Of Enium/Loot Tables"
     },
     {
-      "name": "Cobblegen",
-      "type": "block",
-      "sortid": 88,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "cobblegen",
-      "path": "~/Spirit Of Enium/Random Blocks"
-    },
-    {
       "name": "WendigoCurseOnPotionActiveTick",
       "type": "procedure",
       "sortid": 337,
@@ -7562,7 +7552,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "marble",
-      "path": "~/Spirit Of Enium/Random Blocks"
+      "path": "~/Spirit Of Enium/Stones"
     },
     {
       "name": "PolishedMarble",
@@ -7572,7 +7562,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "polished_marble",
-      "path": "~/Spirit Of Enium/Random Blocks"
+      "path": "~/Spirit Of Enium/Stones"
     },
     {
       "name": "Marblepolishing",
@@ -12858,16 +12848,6 @@
       "path": "~/Spirit Of Enium/Recipes"
     },
     {
-      "name": "CobbleGenerator",
-      "type": "gui",
-      "sortid": 998,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "cobble_generator",
-      "path": "~/Spirit Of Enium/GUIs"
-    },
-    {
       "name": "Gear",
       "type": "item",
       "sortid": 1001,
@@ -12898,46 +12878,6 @@
       "path": "~/Spirit Of Enium/Random Items"
     },
     {
-      "name": "MachineSpeedUpgradeDiamond",
-      "type": "item",
-      "sortid": 1004,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "machine_speed_upgrade_diamond",
-      "path": "~/Spirit Of Enium/Random Items"
-    },
-    {
-      "name": "CobblegenUpdateTick",
-      "type": "procedure",
-      "sortid": 1005,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "cobblegen_update_tick",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Spirit Of Enium/Procedures"
-    },
-    {
       "name": "ItemGenerator",
       "type": "block",
       "sortid": 1006,
@@ -12945,7 +12885,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "item_generator",
-      "path": "~/Spirit Of Enium/Random Blocks"
+      "path": "~/Spirit Of Enium/Technology"
     },
     {
       "name": "ItemGeneratorUpdateTick",
@@ -12974,7 +12914,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Spirit Of Enium/Procedures"
     },
     {
       "name": "ItemGeneratorUpgrade2",
@@ -12984,7 +12925,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "item_generator_upgrade_2",
-      "path": "~/Spirit Of Enium/Random Blocks"
+      "path": "~/Spirit Of Enium/Technology"
     },
     {
       "name": "ItemGeneratorOnBlockRightClicked",
@@ -13017,7 +12958,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Spirit Of Enium/Procedures"
     },
     {
       "name": "ItemGeneratorBlockDestroyedByPlayer",
@@ -13034,7 +12976,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Spirit Of Enium/Procedures"
     },
     {
       "name": "ItemGeneratorUpgrade3",
@@ -13044,7 +12987,7 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "item_generator_upgrade_3",
-      "path": "~/Spirit Of Enium/Random Blocks"
+      "path": "~/Spirit Of Enium/Technology"
     },
     {
       "name": "ItemGeneratorUpgrade2OnBlockRightClicked",
@@ -13077,7 +13020,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Spirit Of Enium/Procedures"
     },
     {
       "name": "ItemGeneratorUpgrade2OnBlockRightClicked2",
@@ -13110,7 +13054,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Spirit Of Enium/Procedures"
     },
     {
       "name": "ItemGeneratorUpgrade3OnBlockRightClicked",
@@ -13127,7 +13072,38 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Spirit Of Enium/Procedures"
+    },
+    {
+      "name": "GearCraft",
+      "type": "recipe",
+      "sortid": 1014,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gear_craft",
+      "path": "~/Spirit Of Enium/Recipes"
+    },
+    {
+      "name": "CountUpgradeCraft",
+      "type": "recipe",
+      "sortid": 1015,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "count_upgrade_craft",
+      "path": "~/Spirit Of Enium/Recipes"
+    },
+    {
+      "name": "SpeedUpgradeCraft",
+      "type": "recipe",
+      "sortid": 1016,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "speed_upgrade_craft",
+      "path": "~/Spirit Of Enium/Recipes"
     }
   ],
   "variable_elements": [
@@ -13364,7 +13340,6 @@
       "item.gtma.enium_helmet": "Enium Helmet",
       "block.gtma.crumbling_oak_stairs": "Crumbling Stairs",
       "block.soe.debris_andesite": "Andesite",
-      "block.soe.cobblegen": "Infinite Cobblestone Generator",
       "advancements.violet_whisperings.descr": "Obtain a long-gone cult\u0027s tome",
       "item.soe.violet_flame_cultist_corpse_sitting_spawn_egg": "Violet Flame Cultist Corpse (Sitting) Spawn Egg",
       "entity.soe.dingus": "Dingus",
@@ -13382,23 +13357,23 @@
       "entity.soe.abyssal_remains_1": "Abyssal Remains 1",
       "block.genuinelytoomanyores.compressed_block_of_rotting_flesh": "Compressed Block Of Flesh",
       "entity.soe.abyssal_remains_3": "Abyssal Remains 3",
-      "entity.soe.abyssal_remains_2": "Abyssal Remains 2",
-      "block.gtma.cactus_slab": "Cactus Slab",
       "item.soe.violet_hide": "Violet Hide",
+      "block.gtma.cactus_slab": "Cactus Slab",
+      "entity.soe.abyssal_remains_2": "Abyssal Remains 2",
       "item.gtma.rotten_horn": "Rotten Horn",
       "block.soe.refined_hellstone_block": "Refined Hellstone Block",
       "item.gtma.steel_shovel": "Steel Shovel",
       "advancements.stronk.descr": "Obtain a steel bar",
       "item.minecraft.splash_potion.effect.choking": "Splash Choking",
-      "item.soe.steel": "Steel Bar",
-      "item.gtma.pigman_spawn_egg": "Pigman Spawn Egg",
       "item.genuinelytoomanyores.wraithly_armor_helmet": "Wraithly Helm",
+      "item.gtma.pigman_spawn_egg": "Pigman Spawn Egg",
+      "item.soe.steel": "Steel Bar",
       "advancements.ancient_rock.title": "2010",
       "entity.gtma.violet_moth": "Violet Moth",
-      "item.gtma.grimmflame": "Grimmflame",
       "item.soe.stone_hammer": "Stone Hammer",
-      "entity.soe.bombe": "Bomb",
+      "item.gtma.grimmflame": "Grimmflame",
       "item.soe.mothmanicon": "Mothmanicon",
+      "entity.soe.bombe": "Bomb",
       "entity.soe.violet_corpse": "Violet Flame Cultist Corpse",
       "item.gtma.nowhere": "Nowhere Portal Igniter",
       "item.soe.violet_winding_spawn_egg": "Violet Winding Spawn Egg",
@@ -13435,15 +13410,15 @@
       "block.soe.reinforced_steel_block": "Reinforced Steel Block",
       "item.soe.clown_armor_leggings": "Clown Pants",
       "item.soe.debris_scrap": "Debris Scrap",
-      "item.soe.molten_leggings": "Molten Grieves",
       "advancements.the_end.title": "The End.",
+      "item.soe.molten_leggings": "Molten Grieves",
       "item.soe.mirror_mask_sad_boots": "Mirror Mask Boots",
       "item.soe.mirror_mask_sad_chestplate": "Mirror Mask Body",
-      "item.soe.asmodeus_clone_spawn_egg": "Asmodeus Clone Spawn Egg",
       "advancements.drastic_measures.descr": "Craft a pistol",
+      "item.soe.asmodeus_clone_spawn_egg": "Asmodeus Clone Spawn Egg",
       "item.soe.grimmature_spawn_egg": "Grimmature Spawn Egg",
-      "item.soe.mirror_mask_boots": "Mirror Mask Boots",
       "item.gtma.n_ns_gown_boots": "N_N\u0027s Shoes",
+      "item.soe.mirror_mask_boots": "Mirror Mask Boots",
       "block.soe.driedblood": "Dried blood",
       "subtitles.asmodeuschime": "Asmodeus Chimes",
       "item.gtma.soelogo": "Soelogo",
@@ -13453,11 +13428,11 @@
       "item.genuinelytoomanyores.lithium_ingot": "Lithium Ingot",
       "item.gtma.zombie_pigman_spawn_egg": "Zombie Pigman Spawn Egg",
       "block.gtma.nightmare_lantern": "Nightmare Lamp",
-      "item.gtma.molten_helmet": "Molten Helmet",
       "advancements.lavendarium_chestplate_obtained.descr": "Craft and wear a full set of lavendarium armor",
+      "item.gtma.molten_helmet": "Molten Helmet",
       "block.gtma.cactus_stairs": "Cactus Stairs",
-      "block.gtma.gingerbread_block": "Gingerbread Block",
       "item.gtma.molten_boots": "Molten Boots",
+      "block.gtma.gingerbread_block": "Gingerbread Block",
       "block.soe.liquid_abyss": "Liquid Abyss",
       "block.gtma.cobblegen": "Cobblegen",
       "item.soe.envys_slasher": "§aEnvy\u0027s Slasher",
@@ -13466,8 +13441,8 @@
       "item.gtma.en_whip": "N\u0027s Whip",
       "item.soe.nail": "Nail",
       "item.gtma.steel_armor_helmet": "Steel Armor Helmet",
-      "subtitles.abysswind": "",
       "block.gtma.hellstonewall_5": "Smoldering Stone",
+      "subtitles.abysswind": "",
       "block.gtma.hellstonewall_2": "Ember Walling",
       "advancements.whip_of_void.descr": "Craft the Palidan Of Tears\u0027 trusty weapon",
       "block.gtma.hellstonewall_1": "Cinder Walling",
@@ -13482,8 +13457,8 @@
       "item.soe.grimmicon": "Grimmicon",
       "item.soe.vgk_grimm_spawn_egg": "Violet GodKing Grimm Spawn Egg",
       "block.soe.faded_light_grey_concrete": "Faded Light Gray Concrete",
-      "item.gtma.violet_flame_cultist_corpse_spawn_egg": "Violet Flame Cultist Corpse Spawn Egg",
       "block.gtma.icing_block": "Icing Block",
+      "item.gtma.violet_flame_cultist_corpse_spawn_egg": "Violet Flame Cultist Corpse Spawn Egg",
       "advancements.feed_the_child.title": "Feed The Child",
       "item.soe.violet_horn": "§5Violet Horn",
       "item.gtma.gun": "Pistol",
@@ -13543,7 +13518,7 @@
       "item.genuinelytoomanyores.steel_sword": "Steel Sword",
       "item.gtma.lavendarium_armor_chestplate": "Lavendarium Body",
       "block.soe.faded_black_concrete": "Faded Black Concrete",
-      "item.soe.machine_speed_upgrade_iron": "Machine Speed Upgrade (Iron)",
+      "item.soe.machine_speed_upgrade_iron": "Machine Count Upgrade",
       "item.genuinelytoomanyores.lavendarium_armor_chestplate": "Lavendarium Mesh Body",
       "item.genuinelytoomanyores.lavendarium_pickaxe": "Lavendarium Pickaxe",
       "entity.soe.violet_flame_cultist_corpse_sitting": "Violet Flame Cultist Corpse (Sitting)",
@@ -13567,19 +13542,19 @@
       "advancements.bonk.descr": "Obtain the Pigclops\u0027 faithful weapon",
       "item.genuinelytoomanyores.lithium_pickaxe": "Lithium Pickaxe",
       "item.gtma.wraithly_armor_boots": "Wraithly Boots",
-      "item.soe.n_ns_gown_chestplate": "En\u0027s Hood",
       "item.soe.walking_stick": "Walking Stick",
+      "item.soe.n_ns_gown_chestplate": "En\u0027s Hood",
       "item.genuinelytoomanyores.steel_armor_leggings": "Steel Armor Leggings",
       "item.gtma.steel_armor_chestplate": "Steel Armor Body",
       "item.soe.mirror_mask_sad_leggings": "Mirror Mask Leggings",
-      "item.soe.shalewood_slicer": "Shalewood Slicer",
       "item.gtma.firey_greatsword": "Firey Greatsword",
+      "item.soe.shalewood_slicer": "Shalewood Slicer",
       "biome.gtma.nowhere_plains": "Nowhere Plains",
       "block.soe.crumbling_oak_fence_gate": "Crumbling Fence Gate",
-      "advancements.burnthefather_2.title": "Burn The Father",
-      "advancements.craving.descr": "Slay the Violet Winding",
-      "item.gtma.violet_cloak_chestplate": "Violet Cloak",
       "item.gtma.husk_sentry_spawn_egg": "Hallownest Husk Sentry Spawn Egg",
+      "item.gtma.violet_cloak_chestplate": "Violet Cloak",
+      "advancements.craving.descr": "Slay the Violet Winding",
+      "advancements.burnthefather_2.title": "Burn The Father",
       "block.soe.gingerbread_blocks_fence": "Gingerbread Fence",
       "block.gtma.crumbling_bark_slab": "Crumbling Bark Slab",
       "block.gtma.clump_of_raw_steel": "Clump Of Raw Steel",
@@ -13594,10 +13569,10 @@
       "item.genuinelytoomanyores.reinforced_battery": "Reinforced Battery",
       "entity.soe.grimmkin_master": "Grimmkin Master",
       "item.soe.mirror_mask_chestplate": "Mirror Mask Body",
-      "entity.soe.reaver": "Reaver",
       "item.genuinelytoomanyores.molten_hamaxe": "Molten Hamaxe",
-      "item.soe.ripped_sheet": "§7Ripped Sheet",
+      "entity.soe.reaver": "Reaver",
       "item.soe.roast_carrot": "Roast Carrot",
+      "item.soe.ripped_sheet": "§7Ripped Sheet",
       "item.genuinelytoomanyores.lithium_sword": "Lithium Sword",
       "block.gtma.crumbling_oak_log": "Crumbling Oak Log",
       "item.soe.tainted_end": "End Farlands Portal Igniter",
@@ -13611,15 +13586,15 @@
       "item.soe.pigman_spawn_egg": "Pigman Spawn Egg",
       "item.minecraft.splash_potion.effect.zombification": "Splash Zombification",
       "item.gtma.violet_tome": "Violet Tome",
-      "item.soe.clown_armor_boots": "Clown Armor Boots",
       "item.genuinelytoomanyores.steel_axe": "Steel Axe",
+      "item.soe.clown_armor_boots": "Clown Armor Boots",
       "block.gtma.lithium_ore": "Lithium Ore",
       "item.gtma.grimmature_summoner": "Grimmature Summoner",
       "item.genuinelytoomanyores.rotten_heap": "Rotten Heap",
       "item.soe.envious_helmet": "§aEnvious Helmet",
       "item.soe.mana_potion": "Mana Potion",
-      "subtitles.heavyspell": "Heavy Spell",
       "block.soe.hellstonewall_5": "Smoldering Stone",
+      "subtitles.heavyspell": "Heavy Spell",
       "block.soe.hellstonewall_4": "Magma Walling",
       "block.soe.hellstonewall_3": "Hellstone Bricks",
       "item.soe.firey_greatsword": "Firey Greatsword",
@@ -13631,8 +13606,8 @@
       "item.gtma.reinforced_battery": "Reinforced Battery",
       "advancements.words_cannot_express.descr": "Wear a piece of reinforced steel block armor and turn your bones to powder. Why did you craft this/ Why is THIS what you spent your time doing? I swear to god there is no mercy upon your soul for this. Actually a lunatic.",
       "item.soe.abyssalremains_2attack": "Abyssalremains 2attack",
-      "advancements.just_like_the_old_times.title": "Knight-mare",
       "advancements.ritual_music.title": "Ritual Music",
+      "advancements.just_like_the_old_times.title": "Knight-mare",
       "entity.soe.grimmchild": "Grimmchild",
       "item.soe.abyssal_remains_2_spawn_egg": "Abyssal Remains 2 Spawn Egg",
       "item.soe.dynamite": "Dynamite",
@@ -13653,8 +13628,8 @@
       "entity.genuinelytoomanyores.wraith": "Wraith",
       "item.genuinelytoomanyores.lavendarium_nugget": "Lavendarium Nugget",
       "advancements.the_end.descr": "Enter Nowhere. The end of the line. An eternal cursing for those who slip into the wrong cracks.",
-      "item.gtma.wraithly_armor_chestplate": "Wraithly Body",
       "item.gtma.brutingstick": "Bruting Stick",
+      "item.gtma.wraithly_armor_chestplate": "Wraithly Body",
       "item.soe.gingerbreadman": "Gingerbread Man",
       "block.soe.crumbling_bark_slab": "Crumbling Bark Slab",
       "item.gtma.zombie_pigman_brute": "Zombie Pigman Brute Spawn Egg",
@@ -14013,7 +13988,7 @@
       "block.soe.polished_marble": "Polished Marble",
       "block.soe.item_generator": "Item Generator",
       "item.soe.nowhere": "Nowhere Portal Igniter",
-      "item.soe.machine_speed_upgrade_gold": "Machine Speed Upgrade (Gold)",
+      "item.soe.machine_speed_upgrade_gold": "Machine Speed Upgrade",
       "item.soe.pale_ingot": "Pale Ingot",
       "block.gtma.crumbling_oak_wood": "Crumbling Oak Wood",
       "item.gtma.ruby": "Ruby",
@@ -14059,7 +14034,6 @@
       "block.soe.block_of_steel": "Block Of Steel",
       "advancements.yuletide_terros.descr": "Craft a cursed present, loaded with a present mimic.",
       "item.soe.rotten_bait": "§dRotten Bait",
-      "item.soe.machine_speed_upgrade_diamond": "Machine Speed Upgrade (Diamond)",
       "item.soe.moth_helmet": "Moth Helmet",
       "item.soe.lavendarium_armor_helmet": "Lavendarium Helmet",
       "item.soe.rottennote": "Rottennote",
@@ -14348,10 +14322,6 @@
             "children": []
           },
           {
-            "name": "Procedures",
-            "children": []
-          },
-          {
             "name": "Tags",
             "children": []
           },
@@ -14497,6 +14467,10 @@
           },
           {
             "name": "Commands",
+            "children": []
+          },
+          {
+            "name": "Procedures",
             "children": []
           }
         ]

@@ -14,6 +14,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 
+import net.mcreator.genuinelytoomanyadditions.item.MachineSpeedUpgradeGoldItem;
 import net.mcreator.genuinelytoomanyadditions.block.ItemGeneratorUpgrade3Block;
 import net.mcreator.genuinelytoomanyadditions.SoeModVariables;
 import net.mcreator.genuinelytoomanyadditions.SoeMod;
@@ -52,7 +53,8 @@ public class ItemGeneratorUpgrade2OnBlockRightClicked2Procedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.GOLD_INGOT)) {
+		if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+				.getItem() == MachineSpeedUpgradeGoldItem.block)) {
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 				BlockState _bs = ItemGeneratorUpgrade3Block.block.getDefaultState();
@@ -83,7 +85,7 @@ public class ItemGeneratorUpgrade2OnBlockRightClicked2Procedure {
 				}
 			}
 			if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
-				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Upgraded to Gold 3!"), (true));
+				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Upgraded: Speed III"), (true));
 			}
 		}
 		if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem() == Items.IRON_INGOT)) {
@@ -91,19 +93,19 @@ public class ItemGeneratorUpgrade2OnBlockRightClicked2Procedure {
 				SoeModVariables.MapVariables.get(world).Amount_Of_Items = Blocks.IRON_ORE.getDefaultState();
 				SoeModVariables.MapVariables.get(world).syncData(world);
 				if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
-					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Upgraded to Iron 2!"), (true));
+					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Upgraded: Count II"), (true));
 				}
 			}
 			if (((SoeModVariables.MapVariables.get(world).Amount_Of_Items).getBlock() == Blocks.IRON_ORE)) {
 				SoeModVariables.MapVariables.get(world).Amount_Of_Items = Blocks.GOLD_ORE.getDefaultState();
 				SoeModVariables.MapVariables.get(world).syncData(world);
 				if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
-					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Upgraded to Iron 3!"), (true));
+					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Upgraded: Count III"), (true));
 				}
 			}
 			if (((SoeModVariables.MapVariables.get(world).Amount_Of_Items).getBlock() == Blocks.GOLD_ORE)) {
 				if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
-					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Max Iron Upgrade!"), (true));
+					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Item Count Maxed"), (true));
 				}
 			}
 		}

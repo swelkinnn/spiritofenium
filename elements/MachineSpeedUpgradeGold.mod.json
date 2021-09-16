@@ -5,7 +5,7 @@
     "renderType": 0,
     "texture": "machine_speed_upgrade_gold",
     "customModelName": "Normal",
-    "name": "Machine Speed Upgrade (Gold)",
+    "name": "Machine Speed Upgrade",
     "rarity": "COMMON",
     "creativeTab": {
       "value": "CUSTOM:GTMMaterials"
@@ -24,7 +24,9 @@
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
-    "specialInfo": [],
+    "specialInfo": [
+      "§7-5 seconds before payout."
+    ],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,

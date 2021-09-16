@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "soe:blocks/hypercharge_tnt_side",
-    "up": "soe:blocks/hypercharge_tnt_side",
-    "north": "soe:blocks/hypercharge_tnt_side",
-    "east": "soe:blocks/hypercharge_tnt_side",
-    "south": "soe:blocks/hypercharge_tnt_side",
-    "west": "soe:blocks/hypercharge_tnt_side",
-    "particle": "soe:blocks/hypercharge_tnt_side"
+    "down": "soe:blocks/item_gen_side",
+    "up": "soe:blocks/itemgentop",
+    "north": "soe:blocks/item_gen_front",
+    "east": "soe:blocks/item_gen_side",
+    "south": "soe:blocks/item_gen_side",
+    "west": "soe:blocks/item_gen_side",
+    "particle": "soe:blocks/item_gen_side"
   }
 }
