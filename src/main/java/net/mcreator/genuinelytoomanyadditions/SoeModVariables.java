@@ -220,6 +220,9 @@ public class SoeModVariables {
 			nbt.putDouble("spawnpointy", instance.spawnpointy);
 			nbt.putDouble("spawnpointz", instance.spawnpointz);
 			nbt.putDouble("mana", instance.mana);
+			nbt.putBoolean("slime", instance.slime);
+			nbt.putBoolean("hasRace", instance.hasRace);
+			nbt.putBoolean("automaton", instance.automaton);
 			return nbt;
 		}
 
@@ -231,6 +234,9 @@ public class SoeModVariables {
 			instance.spawnpointy = nbt.getDouble("spawnpointy");
 			instance.spawnpointz = nbt.getDouble("spawnpointz");
 			instance.mana = nbt.getDouble("mana");
+			instance.slime = nbt.getBoolean("slime");
+			instance.hasRace = nbt.getBoolean("hasRace");
+			instance.automaton = nbt.getBoolean("automaton");
 		}
 	}
 
@@ -240,6 +246,9 @@ public class SoeModVariables {
 		public double spawnpointy = 0;
 		public double spawnpointz = 0;
 		public double mana = 0;
+		public boolean slime = false;
+		public boolean hasRace = false;
+		public boolean automaton = false;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				SoeMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity), new PlayerVariablesSyncMessage(this));
@@ -276,6 +285,9 @@ public class SoeModVariables {
 		clone.spawnpointy = original.spawnpointy;
 		clone.spawnpointz = original.spawnpointz;
 		clone.mana = original.mana;
+		clone.slime = original.slime;
+		clone.hasRace = original.hasRace;
+		clone.automaton = original.automaton;
 		if (!event.isWasDeath()) {
 		}
 	}
@@ -305,6 +317,9 @@ public class SoeModVariables {
 					variables.spawnpointy = message.data.spawnpointy;
 					variables.spawnpointz = message.data.spawnpointz;
 					variables.mana = message.data.mana;
+					variables.slime = message.data.slime;
+					variables.hasRace = message.data.hasRace;
+					variables.automaton = message.data.automaton;
 				}
 			});
 			context.setPacketHandled(true);

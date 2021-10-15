@@ -3,9 +3,9 @@
   "_type": "rangeditem",
   "definition": {
     "renderType": 0,
-    "texture": "plagued_tonic",
+    "texture": "plagued_tonic_v2",
     "customModelName": "Normal",
-    "name": "§aPlagued Tonic",
+    "name": "§aPotion of Invidiousness",
     "specialInfo": [
       "§7Hee hee hee!!"
     ],

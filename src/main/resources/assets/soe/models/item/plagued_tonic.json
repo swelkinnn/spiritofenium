@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "soe:items/plagued_tonic"
+    "layer0": "soe:items/plagued_tonic_v2"
   },
   "display": {
     "thirdperson_righthand": {
