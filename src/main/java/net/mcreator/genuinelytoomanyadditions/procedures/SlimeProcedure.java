@@ -73,7 +73,7 @@ public class SlimeProcedure {
 		IWorld world = (IWorld) dependencies.get("world");
 		if ((((entity.getCapability(SoeModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new SoeModVariables.PlayerVariables())).slime) == (true))) {
-			entity.setAir((int) 100);
+			entity.setAir((int) 1000);
 			if ((!(entity.isSneaking()))) {
 				if (((entity.getPersistentData().getDouble("slimebounce")) == 0)) {
 					entity.setMotion((entity.getMotion().getX()), 0.7, (entity.getMotion().getZ()));

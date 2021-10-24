@@ -5,6 +5,7 @@ import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.entity.Entity;
 
+import net.mcreator.genuinelytoomanyadditions.SoeModVariables;
 import net.mcreator.genuinelytoomanyadditions.SoeMod;
 
 import java.util.Map;
@@ -41,8 +42,13 @@ public class ReaverinfentitytickupdateProcedure {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((((world instanceof World) ? ((World) world).isDaytime() : false) && (world.canBlockSeeSky(new BlockPos((int) x, (int) y, (int) z))))) {
+		if (((((world instanceof World) ? ((World) world).isDaytime() : false) && (world.canBlockSeeSky(new BlockPos((int) x, (int) y, (int) z))))
+				&& (!(entity.isInWater())))) {
 			entity.setFire((int) 15);
+		}
+		if ((SoeModVariables.MapVariables.get(world).HardMode == (false))) {
+			if (!entity.world.isRemote())
+				entity.remove();
 		}
 	}
 }

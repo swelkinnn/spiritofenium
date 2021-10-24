@@ -13459,6 +13459,49 @@
       "ids": {},
       "registry_name": "pigmanrep_35",
       "path": "~/Spirit Of Enium/Commands"
+    },
+    {
+      "name": "Cobwebinstabreak",
+      "type": "procedure",
+      "sortid": 1033,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cobwebinstabreak",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spirit Of Enium/Procedures"
+    },
+    {
+      "name": "Config",
+      "type": "procedure",
+      "sortid": 1034,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "config",
+      "metadata": {
+        "dependencies": []
+      },
+      "path": "~/Spirit Of Enium"
     }
   ],
   "variable_elements": [

@@ -52,7 +52,7 @@ public class ManaOverlay {
 			RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
 			RenderSystem.disableAlphaTest();
 			if (ManaDisplayOverlayIngameProcedure.executeProcedure(ImmutableMap.of("entity", entity))) {
-				Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("soe:textures/mana_100.png"));
+				Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("soe:textures/mana_final_100.png"));
 				Minecraft.getInstance().ingameGUI.blit(event.getMatrixStack(), 0, 0, 0, 0, w, h, w, h);
 			}
 			RenderSystem.depthMask(true);

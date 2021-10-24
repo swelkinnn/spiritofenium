@@ -4,7 +4,7 @@
   "definition": {
     "priority": "HIGHEST",
     "components": [],
-    "baseTexture": "mana_100.png",
+    "baseTexture": "mana_final_100.png",
     "overlayTarget": "Ingame",
     "displayCondition": {
       "name": "ManaDisplayOverlayIngame"

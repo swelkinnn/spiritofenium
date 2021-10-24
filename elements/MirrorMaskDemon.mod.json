@@ -22,14 +22,14 @@
     "leggingsName": "Mirror Mask Leggings",
     "bootsName": "Mirror Mask Boots",
     "helmetSpecialInfo": [
-      "§7What are you..even saying?"
+      "§7What are YOU even saying?"
     ],
     "bodySpecialInfo": [],
     "leggingsSpecialInfo": [],
     "bootsSpecialInfo": [],
-    "helmetModelName": "Default",
-    "helmetModelPart": "Helmet",
-    "helmetModelTexture": "From armor",
+    "helmetModelName": "Modelmirrormask2",
+    "helmetModelPart": "helmet",
+    "helmetModelTexture": "mirror_mask_demon.png",
     "bodyModelName": "Default",
     "bodyModelPart": "Body",
     "armsModelPartL": "Arms L",

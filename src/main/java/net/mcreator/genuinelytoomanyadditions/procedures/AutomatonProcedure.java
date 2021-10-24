@@ -11,7 +11,10 @@ import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.math.vector.Vector2f;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.potion.Effects;
+import net.minecraft.potion.EffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.command.ICommandSource;
 import net.minecraft.command.CommandSource;
@@ -78,8 +81,11 @@ public class AutomatonProcedure {
 		IWorld world = (IWorld) dependencies.get("world");
 		if ((((entity.getCapability(SoeModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new SoeModVariables.PlayerVariables())).automaton) == (true))) {
+			if (entity instanceof LivingEntity)
+				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.STRENGTH, (int) 60, (int) 0, (false), (false)));
+			entity.setAir((int) 1000);
 			if (entity instanceof PlayerEntity)
-				((PlayerEntity) entity).getFoodStats().setFoodLevel((int) 3);
+				((PlayerEntity) entity).getFoodStats().setFoodLevel((int) 6);
 			if (world instanceof ServerWorld) {
 				((World) world).getServer().getCommandManager().handleCommand(
 						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",

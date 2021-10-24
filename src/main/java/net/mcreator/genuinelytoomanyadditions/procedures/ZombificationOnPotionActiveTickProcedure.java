@@ -1,13 +1,15 @@
 package net.mcreator.genuinelytoomanyadditions.procedures;
 
 import net.minecraft.util.DamageSource;
-import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.potion.EffectInstance;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
+import net.mcreator.genuinelytoomanyadditions.potion.ZombificationPotionEffect;
 import net.mcreator.genuinelytoomanyadditions.SoeMod;
 
 import java.util.Map;
+import java.util.Collection;
 
 public class ZombificationOnPotionActiveTickProcedure {
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -17,21 +19,25 @@ public class ZombificationOnPotionActiveTickProcedure {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if ((!(entity instanceof PlayerEntity))) {
-			entity.attackEntityFrom(DamageSource.GENERIC, (float) 1);
-		} else {
-			if ((Math.random() < 0.1)) {
-				if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getTotalArmorValue() : 0) >= 5)) {
-					if ((Math.random() < 0.1)) {
-						if (entity instanceof LivingEntity) {
-							((LivingEntity) entity).attackEntityFrom(new DamageSource("zombification").setDamageBypassesArmor(), (float) 1);
-						}
-					}
-				} else {
-					if (entity instanceof LivingEntity) {
-						((LivingEntity) entity).attackEntityFrom(new DamageSource("zombification").setDamageBypassesArmor(), (float) 1);
+		if ((new Object() {
+			boolean check(Entity _entity) {
+				if (_entity instanceof LivingEntity) {
+					Collection<EffectInstance> effects = ((LivingEntity) _entity).getActivePotionEffects();
+					for (EffectInstance effect : effects) {
+						if (effect.getPotion() == ZombificationPotionEffect.potion)
+							return true;
 					}
 				}
+				return false;
+			}
+		}.check(entity))) {
+			if (((entity.getPersistentData().getDouble("zombTick")) == 0)) {
+				if (entity instanceof LivingEntity) {
+					((LivingEntity) entity).attackEntityFrom(new DamageSource("zombification").setDamageBypassesArmor(), (float) 1);
+				}
+				entity.getPersistentData().putDouble("zombTick", 50);
+			} else {
+				entity.getPersistentData().putDouble("zombTick", ((entity.getPersistentData().getDouble("zombTick")) - 1));
 			}
 		}
 	}

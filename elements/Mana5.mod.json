@@ -4,7 +4,7 @@
   "definition": {
     "priority": "NORMAL",
     "components": [],
-    "baseTexture": "mana_0.png",
+    "baseTexture": "mana_final_0.png",
     "overlayTarget": "Ingame",
     "displayCondition": {
       "name": "Mana5DisplayOverlayTick"
