@@ -1,5 +1,6 @@
 package net.mcreator.genuinelytoomanyadditions.procedures;
 
+import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.math.BlockPos;
@@ -10,13 +11,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.genuinelytoomanyadditions.item.MachineSpeedUpgradeIronItem;
 import net.mcreator.genuinelytoomanyadditions.item.MachineSpeedUpgradeGoldItem;
 import net.mcreator.genuinelytoomanyadditions.block.ItemGeneratorUpgrade2Block;
-import net.mcreator.genuinelytoomanyadditions.SoeModVariables;
 import net.mcreator.genuinelytoomanyadditions.SoeMod;
 
 import java.util.Map;
@@ -55,19 +54,54 @@ public class ItemGeneratorOnBlockRightClickedProcedure {
 		IWorld world = (IWorld) dependencies.get("world");
 		if ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 				.getItem() == MachineSpeedUpgradeIronItem.block)) {
-			if (((SoeModVariables.MapVariables.get(world).Amount_Of_Items).getBlock() == Blocks.AIR)) {
-				SoeModVariables.MapVariables.get(world).Amount_Of_Items = Blocks.IRON_ORE.getDefaultState();
-				SoeModVariables.MapVariables.get(world).syncData(world);
+			if (((new Object() {
+				public double getValue(IWorld world, BlockPos pos, String tag) {
+					TileEntity tileEntity = world.getTileEntity(pos);
+					if (tileEntity != null)
+						return tileEntity.getTileData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "Items")) == 0)) {
+				if (!world.isRemote()) {
+					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+					TileEntity _tileEntity = world.getTileEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_tileEntity != null)
+						_tileEntity.getTileData().putDouble("Items", 1);
+					if (world instanceof World)
+						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+				}
 				if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Upgraded: Count II"), (true));
 				}
-			} else if (((SoeModVariables.MapVariables.get(world).Amount_Of_Items).getBlock() == Blocks.IRON_ORE)) {
-				SoeModVariables.MapVariables.get(world).Amount_Of_Items = Blocks.GOLD_ORE.getDefaultState();
-				SoeModVariables.MapVariables.get(world).syncData(world);
+			} else if (((new Object() {
+				public double getValue(IWorld world, BlockPos pos, String tag) {
+					TileEntity tileEntity = world.getTileEntity(pos);
+					if (tileEntity != null)
+						return tileEntity.getTileData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "Items")) == 1)) {
+				if (!world.isRemote()) {
+					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+					TileEntity _tileEntity = world.getTileEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_tileEntity != null)
+						_tileEntity.getTileData().putDouble("Items", 2);
+					if (world instanceof World)
+						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+				}
 				if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Upgraded: Count III"), (true));
 				}
-			} else if (((SoeModVariables.MapVariables.get(world).Amount_Of_Items).getBlock() == Blocks.GOLD_ORE)) {
+			} else if (((new Object() {
+				public double getValue(IWorld world, BlockPos pos, String tag) {
+					TileEntity tileEntity = world.getTileEntity(pos);
+					if (tileEntity != null)
+						return tileEntity.getTileData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "Items")) == 2)) {
 				if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Item Count Maxed"), (true));
 				}

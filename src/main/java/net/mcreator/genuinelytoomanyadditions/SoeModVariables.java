@@ -22,15 +22,12 @@ import net.minecraft.world.IServerWorld;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Direction;
 import net.minecraft.network.PacketBuffer;
-import net.minecraft.nbt.NBTUtil;
 import net.minecraft.nbt.INBT;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.client.Minecraft;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.BlockState;
 
 import java.util.function.Supplier;
 
@@ -110,7 +107,6 @@ public class SoeModVariables {
 		public boolean HardMode = false;
 		public double machinetimer = 0;
 		public double machinespeedtick = 0;
-		public BlockState Amount_Of_Items = Blocks.AIR.getDefaultState();
 		public MapVariables() {
 			super(DATA_NAME);
 		}
@@ -124,7 +120,6 @@ public class SoeModVariables {
 			HardMode = nbt.getBoolean("HardMode");
 			machinetimer = nbt.getDouble("machinetimer");
 			machinespeedtick = nbt.getDouble("machinespeedtick");
-			Amount_Of_Items = NBTUtil.readBlockState(nbt.getCompound("Amount_Of_Items"));
 		}
 
 		@Override
@@ -132,7 +127,6 @@ public class SoeModVariables {
 			nbt.putBoolean("HardMode", HardMode);
 			nbt.putDouble("machinetimer", machinetimer);
 			nbt.putDouble("machinespeedtick", machinespeedtick);
-			nbt.put("Amount_Of_Items", NBTUtil.writeBlockState(Amount_Of_Items));
 			return nbt;
 		}
 
